@@ -45,3 +45,5 @@ With trained model, we are able to extract target object from background by labe
 We were also able to extract target object from non-target and background as shown below:
 
 ![alt text][image4]
+
+Due to lack of support from AWS, I had to train my neural network on my local machine which took lot of time to train the FCN neural network. The only variation I was able to conduct is my reducing the batch size to achieve an accuracy of 41%. In future with AWS support, I will train the neural network by increasing number of epochs and see where it overfits the model and increase the initial filter size to achieve better accuracy. 
