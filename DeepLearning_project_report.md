@@ -18,7 +18,9 @@ Network architecture of fully convolutional neural network for semantic segmenta
 
 ![alt text][image1]
 
+Network architecture consist of encoder layers, followed by convolutional layer and then decoder layers. Encoder layer reduces the spatial dimension whereas decoder layers does an opposite operation. 1x1 convolutional layer is chosen instead of fully connected layer to retain the spatial information.
 
+In this project, I have chosen 3 encoder layers with initial filter size as 32, followed by 1x1 convolutional layer and then followed by 3 decoder layers.
 
 ### Parameters chosen for the neural network
 
