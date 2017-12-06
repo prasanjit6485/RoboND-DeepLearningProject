@@ -18,6 +18,16 @@ Network architecture of fully convolutional neural network for semantic segmenta
 
 ![alt text][image1]
 
+
+
 ### Parameters chosen for the neural network
+
+* Learning rate: From Keras documentation, there are various optimizers like SGD, RMSprop, Adam, Nadam, etc. can be used. In this project, I have used Nesterov Adam optimizer which is Adam RMSprop with Nesterov momentum where learning rate is kept as default as 0.002.
+
+* Epoch: Epoch is number of times the entire training dataset gets propagated through the network. In this project, I have chosen number of epoch as 40.
+
+* Batch size: Batch size is number of training samples/images that get propagated through the network in a single pass. Initially I had chosen batch size as 40 and yield around 36%. Then I chose batch size as 20 and yield around 41%.
+
+* Workers: Workers is maximum number of processes to spin up. Since I was not able to use my AWS account due to lack of limit and had to use my local machine to train my neural network, I kept the parameters as default. 
 
 ### Conclusion
