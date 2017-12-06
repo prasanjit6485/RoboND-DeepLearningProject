@@ -4,6 +4,10 @@
 
 [image1]: ./NetworkArchitecture.jpg
 
+[image2]: ./TargetObject.png
+[image3]: ./NonTargetObject.png
+[image4]: ./TargetfromNonTargetAndBackground.png
+
 ## [Rubric](https://review.udacity.com/#!/rubrics/972/view) Points
 ### Here I will consider the rubric points individually and describe how I addressed each point in my implementation.  
 
@@ -36,3 +40,8 @@ In this project, I have chosen 3 encoder layers with initial filter size as 32, 
 
 With trained model, we are able to extract target object from background by labelling the target object as shown below:
 
+![alt text][image2]
+
+We were also able to extract target object from non-target and background as shown below:
+
+![alt text][image4]
