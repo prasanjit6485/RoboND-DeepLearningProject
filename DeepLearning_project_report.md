@@ -33,3 +33,6 @@ In this project, I have chosen 3 encoder layers with initial filter size as 32, 
 * Workers: Workers is maximum number of processes to spin up. Since I was not able to use my AWS account due to lack of limit and had to use my local machine to train my neural network, I kept the parameters as default. 
 
 ### Conclusion
+
+With trained model, we are able to extract target object from background by labelling the target object as shown below:
+
