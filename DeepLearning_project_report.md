@@ -46,4 +46,6 @@ We were also able to extract target object from non-target and background as sho
 
 ![alt text][image4]
 
+However, the trained model won't be able to classify other target object like dog, cat, car, etc. because the model was trained only for target object with human being of particular shape and color. To classify other target object like dog, cat, car, etc. and follow other target object, then model needs to be trained for other target object like dog, cat, car, etc. To make drone follow particular object, the model always needs to be trained for that same particular object.  
+
 Due to lack of support from AWS, I had to train my neural network on my local machine which took lot of time to train the FCN neural network. The only variation I was able to conduct is my reducing the batch size to achieve an accuracy of 41%. In future with AWS support, I will train the neural network by increasing number of epochs and see where it overfits the model and increase the initial filter size to achieve better accuracy. 
