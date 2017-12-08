@@ -22,7 +22,7 @@ Network architecture of fully convolutional neural network for semantic segmenta
 
 ![alt text][image1]
 
-Network architecture consist of encoder layers, followed by convolutional layer and then decoder layers. Encoder layer reduces the spatial dimension whereas decoder layers does an opposite operation. 1x1 convolutional layer is chosen instead of fully connected layer to retain the spatial information.
+Network architecture consist of encoder layers, followed by convolutional layer and then decoder layers. Encoder layers takes an input image and generates a high-dimensional feature vector by aggregating features at multiple levels. Decoder layers takes a high-dimensional feature vector and generates a semantic segmentation mask by decoding features aggregated by encoder at multiple levels. Encoder layer reduces the spatial dimension whereas decoder layers does an opposite operation. 1x1 convolutional layer is chosen instead of fully connected layer to retain the spatial information.
 
 In this project, I have chosen 3 encoder layers with initial filter size as 32, followed by 1x1 convolutional layer and then followed by 3 decoder layers.
 
@@ -46,6 +46,6 @@ We were also able to extract target object from non-target and background as sho
 
 ![alt text][image4]
 
-However, the trained model won't be able to classify other target object like dog, cat, car, etc. because the model was trained only for target object with human being of particular shape and color. To classify other target object like dog, cat, car, etc. and follow other target object, then model needs to be trained for other target object like dog, cat, car, etc. To make drone follow particular object, the model always needs to be trained for that same particular object.  
+However, the trained model won't be able to classify other target object like dog, cat, car, etc. because the model was trained only for target object with human being of particular shape and color. To classify other target object like dog, cat, car, etc. and follow other target object, then model needs to be trained for other target object like dog, cat, car, etc. We could use the same network architecture unchanged but train on image data by collecting datasets for the target object that needs to make drone follow that object. To make drone follow particular object, the model always needs to be trained for that same particular object.  
 
 Due to lack of support from AWS, I had to train my neural network on my local machine which took lot of time to train the FCN neural network. The only variation I was able to conduct is my reducing the batch size to achieve an accuracy of 41%. In future with AWS support, I will train the neural network by increasing number of epochs and see where it overfits the model and increase the initial filter size to achieve better accuracy. 
