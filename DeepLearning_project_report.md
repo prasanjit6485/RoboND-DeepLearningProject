@@ -22,9 +22,9 @@ Network architecture of fully convolutional neural network for semantic segmenta
 
 ![alt text][image1]
 
-Network architecture consist of encoder layers, followed by convolutional layer and then decoder layers. Encoder layers takes an input image and generates a high-dimensional feature vector by aggregating features at multiple levels. Decoder layers takes a high-dimensional feature vector and generates a semantic segmentation mask by decoding features aggregated by encoder at multiple levels. Encoder layer reduces the spatial dimension whereas decoder layers does an opposite operation. 1x1 convolutional layer is chosen instead of fully connected layer to retain the spatial information.
+Network architecture consist of encoder layers, followed by convolutional layer and then decoder layers. Encoder layers takes an input image and generates a high-dimensional feature vector by aggregating features at multiple levels. The encoder part have pooling features which eventually reduces the risk of over-fitting but reduces the spatial dimension. Decoder layers takes a high-dimensional feature vector and generates a semantic segmentation mask by decoding features aggregated by encoder at multiple levels. The decoder part recovers the spatial dimension. In the process, we lose some resolution because the activations were downscaled and therefore to add back some resolution by adding activations from the previous layer called as skip connections. 1x1 convolutional layer is chosen instead of fully connected layer to retain the spatial information.
 
-In this project, I have chosen 3 encoder layers with initial filter size as 32, followed by 1x1 convolutional layer and then followed by 3 decoder layers.
+In this project, I have chosen 3 encoder layers with initial filter size as 32, followed by 1x1 convolutional layer and then followed by 3 decoder layers. We can add more layers in future or increase filter size to inrease the overall accuracy.
 
 ### Parameters chosen for the neural network
 
